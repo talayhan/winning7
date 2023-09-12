@@ -3,16 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Team Generator</title>
+    <title>Team Generator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Random Team Generator</h1>
+    <h1>Team Generator</h1>
     <div class="input-container">
         <label for="player-name">Enter Player Name:</label>
         <input type="text" id="player-name" maxlength="14">
         <button id="add-player">Add Player</button>
-        <button id="reset-players">Reset Players</button>
+        <button id="reset-players">Reset Players</button> <br />
+
+        <label for="attack">Attack skill:</label>
+        <input type="range" id="a_input" min="0" max="10" value="5" step="1"/>
+        <label id="a_value">Attack: </label> <br>
+
+        <label for="defense">Defense skill:</label>
+        <input type="range" id="d_input" min="0" max="10" value="5" step="1"/>
+        <Label id="d_value">Defense: </label><br>
+
+        <label for="creative">Creative skill:</label>
+        <input type="range" id="c_input" min="0" max="10" value="5" step="1"/>
+        <label id="c_value">Creativity: </label><br>
+
     </div>
     <div class="players-container">
         <div class="players" id="players">

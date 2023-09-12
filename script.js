@@ -17,6 +17,11 @@ function addPlayer() {
     }
 }
 
+function resetPlayers() {
+    const playerList = document.getElementById('players');
+    playerList.innerHTML = '';
+}
+
 // Function to update the player list on the webpage
 function updatePlayerList() {
     const playerList = document.getElementById('players');
@@ -56,6 +61,7 @@ function updateTeamLists() {
 
 // Attach event listeners to buttons
 document.getElementById('add-player').addEventListener('click', addPlayer);
+document.getElementById('reset-players').addEventListener('click', resetPlayers);
 document.getElementById('generate-teams').addEventListener('click', generateTeams);
 
 // Detect enter

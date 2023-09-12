@@ -19,7 +19,7 @@ function addPlayer() {
 
 // Function to update the player list on the webpage
 function updatePlayerList() {
-    const playerList = document.getElementById('team1');
+    const playerList = document.getElementById('players');
     playerList.innerHTML = '';
 
     players.forEach((player, index) => {
@@ -57,3 +57,23 @@ function updateTeamLists() {
 // Attach event listeners to buttons
 document.getElementById('add-player').addEventListener('click', addPlayer);
 document.getElementById('generate-teams').addEventListener('click', generateTeams);
+
+// Detect enter
+let textarea = document.getElementById("player-name");
+textarea.addEventListener("keydown", (e) => {
+    console.log("enter")
+    if (!e.repeat) {
+        if (e.which == 13) {
+            const playerNameInput = document.getElementById('player-name');
+            const playerName = playerNameInput.value.trim();
+
+            if (playerName.length > 0 && players.length < 14) {
+                players.push(playerName);
+                playerNameInput.value = '';
+                updatePlayerList();
+            } else {
+                alert("Please enter a valid player name (up to 14 characters) and ensure there are less than 14 players.");
+            }
+        }
+    }
+});

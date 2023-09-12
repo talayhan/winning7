@@ -40,6 +40,12 @@ button:hover {
     width: 45%;
 }
 
+.teams-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
 #generate-teams {
     margin-top: 20px;
     background-color: #4CAF50;

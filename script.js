@@ -19,7 +19,20 @@ function addPlayer() {
 
 function resetPlayers() {
     const playerList = document.getElementById('players');
+    const team1Container = document.getElementById('team1');
+    const team2Container = document.getElementById('team2');
+
+    // Delete each element of array
+    players = [];
+    team1 = [];
+    team2 = [];
+
     playerList.innerHTML = '';
+    team1Container.innerHTML = '';
+    team2Container.innerHTML = '';
+
+    team1Container.innerHTML = `<h2>Team 1</h2>${team1.join('<br>')}`;
+    team2Container.innerHTML = `<h2>Team 2</h2>${team2.join('<br>')}`;
 }
 
 // Function to update the player list on the webpage
